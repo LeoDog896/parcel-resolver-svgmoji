@@ -15,7 +15,7 @@ const openmoji = new Openmoji({ data, type: "individual" });
 const emoji =
   /[\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]/u;
 const emojiFile =
-  /^[\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}].svg$/u;
+  /^(twemoji|blobmoji|notomoji|openmoji)([\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]).svg$/u;
 
 export default new Resolver({
   async resolve({ specifier }) {

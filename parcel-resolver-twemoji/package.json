@@ -1,7 +1,7 @@
 {
-  "name": "parcel-optimizer-twemoji-favicon",
+  "name": "parcel-resolver-twemoji",
   "version": "1.0.0",
-  "description": "Parcel plugin for emojis as favicons",
+  "description": "Parcel plugin for twemojis as images",
   "main": "dist/index.js",
   "type": "commonjs",
   "types": "dist/index.d.ts",

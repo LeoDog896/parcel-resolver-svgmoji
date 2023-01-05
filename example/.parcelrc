@@ -1,4 +1,4 @@
 {
   "extends": ["@parcel/config-default"],
-  "transformers": ["parcel-transformer-twemoji"]
+  "resolvers": ["...", "parcel-resolver-twemoji"]
 }

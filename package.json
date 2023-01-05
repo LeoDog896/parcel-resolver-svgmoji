@@ -6,7 +6,7 @@
   },
   "workspaces": [
     "example",
-    "parcel-transformer-twemoji"
+    "parcel-resolver-twemoji"
   ],
   "devDependencies": {
     "prettier": "^2.8.1"

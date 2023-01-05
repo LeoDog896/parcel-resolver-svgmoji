@@ -11,5 +11,6 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "outDir": "dist"
-  }
+  },
+  "include": ["src"]
 }

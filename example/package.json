@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --public-url ./ index.html"
+    "dev": "parcel index.html --log-level verbose",
+    "build": "parcel build --log-level verbose --public-url ./ index.html"
   },
   "devDependencies": {
     "parcel": "^2.8.2"

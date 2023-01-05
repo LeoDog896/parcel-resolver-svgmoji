@@ -1,4 +1,4 @@
 {
   "extends": ["@parcel/config-default"],
-  "resolvers": ["...", "parcel-resolver-svgmoji"]
+  "resolvers": ["parcel-resolver-svgmoji", "..."]
 }

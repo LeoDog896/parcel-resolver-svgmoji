@@ -1,4 +1,4 @@
-# parcel-resolver-twemoji
+# parcel-transformer-twemoji
 
 create images from your favorite emojis!
 

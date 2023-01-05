@@ -1,5 +1,5 @@
 {
-  "name": "parcel-resolver-twemoji",
+  "name": "parcel-transformer-twemoji",
   "version": "1.0.0",
   "description": "Parcel plugin for twemojis as images",
   "main": "dist/index.js",

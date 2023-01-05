@@ -1,0 +1,9 @@
+{
+  "name": "parcel-emoji-favicon",
+  "version": "1.0.0",
+  "description": "Parcel plugin for emojis as favicons",
+  "main": "dist/index.js",
+  "repository": "https://github.com/LeoDog896/parcel-emoji-favicon.git",
+  "author": "Tristan F. <LeoDog896@hotmail.com>",
+  "license": "MIT"
+}

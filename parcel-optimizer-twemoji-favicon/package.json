@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Parcel plugin for emojis as favicons",
   "main": "dist/index.js",
-  "type": "module",
+  "type": "commonjs",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/LeoDog896/parcel-emoji-favicon.git",
   "author": "Tristan F. <LeoDog896@hotmail.com>",

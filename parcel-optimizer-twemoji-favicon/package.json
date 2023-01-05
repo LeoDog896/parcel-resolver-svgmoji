@@ -1,5 +1,5 @@
 {
-  "name": "parcel-optimizer-twimoji-favicon",
+  "name": "parcel-optimizer-twemoji-favicon",
   "version": "1.0.0",
   "description": "Parcel plugin for emojis as favicons",
   "main": "dist/index.js",

@@ -23,9 +23,19 @@ create images from your favorite emojis!
 const fishURL = new URL("openmoji/🐟.svg", import.meta.url);
 ```
 
+## Credits
+
 Check out the emoji repositories svgmoji uses:
 
 - google's [notoemoji](https://github.com/googlefonts/noto-emoji)
 - a fork of google's notoemoji, [blobmoji](https://github.com/c1710/blobmoji)
 - twitter's [twemoji](https://github.com/twitter/twemoji) (remember! they are CC-BY-4.0, and have preferred attribution requirements.)
 - [openmoji](https://github.com/hfg-gmuend/openmoji)
+
+## Contributing
+
+Go to the [contributing guide](./CONTRIBUTING.md) to learn how to contribute to this project.
+
+## License
+
+[MIT](./LICENSE)

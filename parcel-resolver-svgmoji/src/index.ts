@@ -7,6 +7,7 @@ import { Openmoji } from "@svgmoji/openmoji";
 import data from "svgmoji/emoji.json";
 import { Moji } from "svgmoji";
 import fetch from "node-fetch";
+import { getSpecifierInformation } from "./specifierParser"
 
 const mojis: Record<string, Moji> = {
   twemoji: new Twemoji({ data, type: "individual" }),
@@ -14,27 +15,6 @@ const mojis: Record<string, Moji> = {
   notomoji: new Notomoji({ data, type: "individual" }),
   openmoji: new Openmoji({ data, type: "individual" }),
 };
-
-const emojiFile =
-  /^(twemoji|blobmoji|notomoji|openmoji)\/([\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]).svg$/u;
-
-interface SpecifierInformation {
-  mojiType: string;
-  emoji: string;
-}
-
-export function getSpecifierInformation(
-  specifier: string
-): SpecifierInformation | null {
-  const emojiInformation = specifier.match(emojiFile);
-
-  if (!emojiInformation) return null;
-
-  return {
-    mojiType: emojiInformation[1]!,
-    emoji: emojiInformation[2]!,
-  };
-}
 
 export default new Resolver({
   async resolve({ specifier, logger }) {

@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "start": "parcel index.html",
     "dev": "parcel index.html --log-level verbose",
     "build": "parcel build --log-level verbose --public-url ./ index.html"
   },

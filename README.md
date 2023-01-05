@@ -1,4 +1,4 @@
-# parcel-resolver-twemoji
+# [parcel](https://github.com/parcel-bundler/parcel)-resolver-[twemoji](https://github.com/twitter/twemoji)
 
 create images from your favorite emojis!
 

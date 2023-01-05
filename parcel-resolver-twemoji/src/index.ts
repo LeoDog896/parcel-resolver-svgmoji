@@ -24,7 +24,7 @@ export default new Resolver({
       const body = await request.text();
 
       return {
-        filePath: path.join(__dirname, "emoji.svg"),
+        filePath: path.join(__dirname, specifier),
         code: body,
       };
     }

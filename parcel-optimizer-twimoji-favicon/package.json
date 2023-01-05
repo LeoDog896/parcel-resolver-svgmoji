@@ -1,0 +1,20 @@
+{
+  "name": "parcel-optimizer-twimoji-favicon",
+  "version": "1.0.0",
+  "description": "Parcel plugin for emojis as favicons",
+  "main": "dist/index.js",
+  "repository": "https://github.com/LeoDog896/parcel-emoji-favicon.git",
+  "author": "Tristan F. <LeoDog896@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^2.8.2",
+    "twemoji": "^14.0.2"
+  },
+  "devDependencies": {
+    "@types/twemoji": "^13.1.2",
+    "typescript": "^4.9.4"
+  }
+}

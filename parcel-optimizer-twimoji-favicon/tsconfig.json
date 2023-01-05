@@ -7,6 +7,6 @@
     "strict": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
-    "outDir": "dist",
+    "outDir": "dist"
   }
 }

@@ -7,7 +7,8 @@
   "author": "Tristan F. <LeoDog896@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "tsc"
   },
   "dependencies": {
     "@parcel/plugin": "^2.8.2",

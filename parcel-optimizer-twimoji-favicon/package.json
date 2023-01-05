@@ -13,6 +13,9 @@
     "@parcel/plugin": "^2.8.2",
     "twemoji": "^14.0.2"
   },
+  "engines": {
+    "parcel": "2.x"
+  },
   "devDependencies": {
     "@types/twemoji": "^13.1.2",
     "typescript": "^4.9.4"

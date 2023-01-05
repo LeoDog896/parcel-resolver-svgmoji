@@ -5,28 +5,44 @@ import { Blobmoji } from "@svgmoji/blob";
 import { Notomoji } from "@svgmoji/noto";
 import { Openmoji } from "@svgmoji/openmoji";
 import data from "svgmoji/emoji.json";
+import { Moji } from "svgmoji";
 import fetch from "node-fetch";
 
-const twemoji = new Twemoji({ data, type: "individual" });
-const blobmoji = new Blobmoji({ data, type: "individual" });
-const notomoji = new Notomoji({ data, type: "individual" });
-const openmoji = new Openmoji({ data, type: "individual" });
+const mojis: Record<string, Moji> = {
+  twemoji: new Twemoji({ data, type: "individual" }),
+  blobmoji: new Blobmoji({ data, type: "individual" }),
+  notomoji: new Notomoji({ data, type: "individual" }),
+  openmoji: new Openmoji({ data, type: "individual" }),
+}
 
-const emoji =
-  /[\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]/u;
-const emojiFile =
-  /^(twemoji|blobmoji|notomoji|openmoji)([\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]).svg$/u;
+export const emojiFile =
+  /^(twemoji|blobmoji|notomoji|openmoji)\/([\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]).svg$/u;
+
+interface SpecifierInformation {
+  mojiType: string;
+  emoji: string;
+}
+
+export function getSpecifierInformation(specifier: string): SpecifierInformation | null {
+  const emojiInformation = specifier.match(emojiFile)
+
+  if (!emojiInformation) return null;
+
+  if (emojiInformation[0] == null) return null;
+  if (emojiInformation[1] == null) return null;
+  if (emojiInformation[2] == null) return null;
+
+  return {
+    mojiType: emojiInformation[1]!,
+    emoji: emojiInformation[2]!
+  }
+}
 
 export default new Resolver({
   async resolve({ specifier }) {
-    if (emojiFile.test(specifier)) {
-      const emojiCharacter = specifier.match(emoji);
-
-      if (!emojiCharacter || emojiCharacter.length === 0) {
-        throw Error("Character not recognized by regex.");
-      }
-
-      const request = await fetch(twemoji.url(emojiCharacter[0]));
+    const info = getSpecifierInformation(specifier);
+    if (info != null) {
+      const request = await fetch(mojis[info.mojiType].url(info.emoji));
       const body = await request.text();
 
       return {

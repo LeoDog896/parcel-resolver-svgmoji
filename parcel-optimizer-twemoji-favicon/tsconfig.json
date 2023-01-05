@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "es2022",
     "module": "ESNext",
+    "sourceMap": true,
+    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

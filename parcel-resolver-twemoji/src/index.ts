@@ -3,7 +3,7 @@ import path from 'path';
 
 export default new Resolver({
   async resolve({specifier}) {
-    if (specifier === 'special-module') {
+    if (specifier === '🍔a.ico') {
       return {
         filePath: path.join(__dirname, 'special-module.js'),
         code: 'export default "This is a special module!";'

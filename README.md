@@ -4,18 +4,18 @@ create images from your favorite emojis!
 
 ```html
 <!-- set your favicon as a burger -->
-<link rel="icon" type="image/x-icon" href="twemoji-🍔.svg" sizes="any" />
+<link rel="icon" type="image/x-icon" href="twemoji/🍔.svg" sizes="any" />
 
 <!-- or maybe place it in an image? -->
-<img src="notomoji-🚀.svg" width="40px" height="40px" />
+<img src="notomoji/🚀.svg" width="40px" height="40px" />
 
 <!-- you don't *have* to specify dimensions, but then you'll get a big emoji -->
-<img src="blobmoji-💃.svg" />
+<img src="blobmoji/💃.svg" />
 ```
 
 ```ts
 // even use it in URLs!
-const fishURL = new URL("openmoji-🐟.svg", import.meta.url);
+const fishURL = new URL("openmoji/🐟.svg", import.meta.url);
 ```
 
 Check out the emoji repositories svgmoji uses:

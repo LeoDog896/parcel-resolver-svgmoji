@@ -16,7 +16,7 @@ const mojis: Record<string, Moji> = {
 };
 
 const emojiFile =
-  /^(twemoji|blobmoji|notomoji|openmoji)-([\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]).svg$/u;
+  /^(twemoji|blobmoji|notomoji|openmoji)\/([\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\u{1F9B0}-\u{1F9B3}]).svg$/u;
 
 interface SpecifierInformation {
   mojiType: string;
